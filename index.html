@@ -1,0 +1,276 @@
+<!-- tell angular this is flexboxDemoApp -->
+<html lang="en" ng-app="flexboxDemoApp">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ubiqum's Flexbox Trainer</title>
+	<!-- Angulars Material CSS -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- include our compiled CSS -->
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<!-- this will be the only controller AppCtrl -->
+
+<body ng-controller="AppCtrl">
+	<!-- Here's the main container -->
+	<md-content class="md-padding">
+		<div layout-gt-md="column" layout="column">
+			<div flex>
+				<div class="topHeader" layout="row" layout-gt-md="row">
+					<div>
+						<h2 class="titleUbi">Ubiqum's FlexBox Trainer</h2>
+					</div>
+					<div flex>
+						<img class="logoUBI pull-right" src="logoubi.png">
+					</div>
+				</div>
+				<md-divider></md-divider>
+
+				<h3>Parent Flex Properties &ndash; <span class="highlight">flex container</span></h3>
+				<div layout="row" layout-gt-md="row" class="code">
+					<div flex class="parentProperties">
+						<strong>flex-direction</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="It establishes the main-axis, thus defining the direction flex items are placed in the flex container.<br><em>Reminder: the main axis of a flex container is the primary axis along which flex items are laid out. Beware, it is not necessarily horizontal; it depends on the <code>flex-direction</code> property.</em><br>The <code>flex-direction</code> property accepts 4 different values: <br><ul><li><code>row</code> (<strong>default</strong>): same as text direction</li><li><code>row-reverse</code>: opposite to text direction</li><li><code>column</code>: same as <code>row</code> but top to bottom</li><li><code>column-reverse</code>: same as <code>row-reverse</code> top to bottom</li></ul>">
+						<md-radio-group ng-model="parent.flexDirection">
+							<md-radio-button value="row" class="highlight">row</md-radio-button>
+							<md-radio-button value="row-reverse">row-reverse</md-radio-button>
+							<md-radio-button value="column">column</md-radio-button>
+							<md-radio-button value="column-reverse">column-reverse</md-radio-button>
+						</md-radio-group>
+					</div>
+					<div flex class="parentProperties">
+						<strong>flex-wrap</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It defines whether the flex items are forced in a single line or can be flowed into multiple lines. If set to multiple lines, it also defines the cross-axis which determines the direction new lines are stacked in.</p>
+<p><em>Reminder: the cross axis is the axis perpendicular to the main axis. Its direction depends on the main axis direction.</em></p>
+<p>The <code>flex-wrap</code> property accepts 3 different values:</p>
+<ul>
+<li><code>nowrap</code> (<strong>default</strong>): single-line which may cause the container to overflow</li>
+<li><code>wrap</code>: multi-lines, direction is defined by <code>flex-direction</code></li>
+<li><code>wrap-reverse</code>: multi-lines, opposite to direction defined by <code>flex-direction</code></li>
+</ul>">
+						<md-radio-group ng-model="parent.flexWrap">
+							<md-radio-button value="nowrap" class="highlight">nowrap</md-radio-button>
+							<md-radio-button value="wrap">wrap</md-radio-button>
+							<md-radio-button value="wrap-reverse">wrap-reverse</md-radio-button>
+						</md-radio-group>
+					</div>
+					<div flex class="parentProperties">
+						<strong>justify-content</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.</p>
+<p>The <code>justify-content</code> property accepts 5 different values:</p>
+<ul>
+<li><code>flex-start</code> (<strong>default</strong>): items are packed toward the start line</li>
+<li><code>flex-end</code>: items are packed toward to end line</li>
+<li><code>center</code>: items are centered along the line</li>
+<li><code>space-between</code>: items are evenly distributed in the line; first item is on the start line, last item on the end line</li>
+<li><code>space-around</code>: items are evenly distributed in the line with equal space around them</li>
+<li><code>space-evenly</code>: items are distributed so that the spacing between any two adjacent alignment subjects, before the first alignment subject, and after the last alignment subject is the same</li>
+</ul>">
+						<md-radio-group ng-model="parent.justifyContent">
+							<md-radio-button value="flex-start" class="highlight">flex-start</md-radio-button>
+							<md-radio-button value="flex-end">flex-end</md-radio-button>
+							<md-radio-button value="center">center</md-radio-button>
+							<md-radio-button value="space-between">space-between</md-radio-button>
+							<md-radio-button value="space-around">space-around</md-radio-button>
+						</md-radio-group>
+					</div>
+					<div flex class="parentProperties">
+						<strong>align-items</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It defines the default behaviour for how flex items are laid out along the cross axis on the current line. You can think of it as the <code>justify-content</code> version for the cross-axis (perpendicular to the main-axis).</p>
+<p>The <code>align-items</code> property accepts 5 different values:</p>
+<ul>
+<li><code>flex-start</code>: cross-start margin edge of the items is placed on the cross-start line</li>
+<li><code>flex-end</code>: cross-end margin edge of the items is placed on the cross-end line</li>
+<li><code>center</code>: items are centered in the cross-axis</li>
+<li><code>baseline</code>: items are aligned such as their baselines align</li>
+<li><code>stretch</code> (<strong>default</strong>): stretch to fill the container (still respect min-width/max-width)</li>
+</ul>">
+						<md-radio-group ng-model="parent.alignItems">
+							<md-radio-button value="stretch" class="highlight">stretch</md-radio-button>
+							<md-radio-button value="flex-start">flex-start</md-radio-button>
+							<md-radio-button value="flex-end">flex-end</md-radio-button>
+							<md-radio-button value="center">center</md-radio-button>
+							<md-radio-button value="baseline">baseline</md-radio-button>
+						</md-radio-group>
+					</div>
+					<div flex class="parentProperties">
+						<strong>align-content</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It helps aligning a flex container's lines within it when there is extra space in the cross-axis, similar to how <code>justify-content</code> aligns individual items within the main-axis. </p>
+<p><em>Note, this property has no effect when the flexbox has only a single line.</em></p>
+<p>The <code>align-content</code> property accepts 6 different values:</p>
+<ul>
+<li><code>flex-start</code>: lines packed to the start of the container</li>
+<li><code>flex-end</code>: lines packed to the end of the container</li>
+<li><code>center</code>: lines packed to the center of the container</li>
+<li><code>space-between</code>: lines evenly distributed; the first line is at the start of the container while the last one is at the end</li>
+<li><code>space-around</code>: lines evenly distributed with equal space between them</li>
+<li><code>stretch</code> (<strong>default</strong>): lines stretch to take up the remaining space</li>
+</ul>">
+						<md-radio-group ng-model="parent.alignContent">
+							<md-radio-button value="stretch" class="highlight">stretch</md-radio-button>
+							<md-radio-button value="flex-start">flex-start</md-radio-button>
+							<md-radio-button value="flex-end">flex-end</md-radio-button>
+							<md-radio-button value="center">center</md-radio-button>
+							<md-radio-button value="space-between">space-between</md-radio-button>
+							<md-radio-button value="space-around">space-around</md-radio-button>
+						</md-radio-group>
+					</div>
+				</div>
+
+				<small>* The default property values are <span class="highlight">highlighed</span>.</small>
+
+				<md-divider></md-divider>
+
+				<h3>Children Flex Properties &ndash; <span class="highlight">flex items</span></h3>
+				<div flex>
+					<div layout="row" layout-gt-md="row" class="code">
+						<div flex class="propertiesChildDesc">
+							<strong>flex-grow</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>IT defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up. </p>
+<p>For example, if all items have <code>flex-grow</code> set to 1, every child will set to an equal size inside the container. If you were to give one of the children a value of 2, that child would take up twice as much space as the others.</p>">
+						</div>
+						<div flex class="propertiesChildDesc">
+							<strong>flex-shrink</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It specifies the 'flex shrink factor', which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when there isn't enough space on the row.</p>
+<p>When omitted, it is set to <code>1</code> and the flex shrink factor is multiplied by the flex basis when distributing negative space.</p>">
+						</div>
+						<div flex class="propertiesChildDesc">
+							<strong>flex-basis</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It specifies the initial size of the flex item, before any available space is distributed according to the flex factors. When omitted from the <code>flex</code> shorthand, its specified value is the length zero.</p>
+<p>A flex-basis value set to <code>auto</code> sizes the element according to its size property (which can itself be the keyword <code>auto</code>, which sizes the element based on its contents).</p>">
+						</div>
+						<div flex class="propertiesChildDesc">
+							<strong>align-self</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It makes possible to override the <code>align-items</code> value for specific flex items.</p>
+<p>The <code>align-self</code> property accepts the same 5 values as the <code>align-items</code>:</p>
+<ul>
+<li><code>flex-start</code>: cross-start margin edge of the item is placed on the cross-start line</li>
+<li><code>flex-end</code>: cross-end margin edge of the item is placed on the cross-end line</li>
+<li><code>center</code>: item is centered in the cross-axis</li>
+<li><code>baseline</code>: items are aligned such as their baseline are aligned </li>
+<li><code>stretch</code> (default): stretch to fill the container (still respect min-width/max-width)</li>
+</ul>">
+						</div>
+						<div flex class="propertiesChildDesc">
+							<strong>order</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>Flex items are displayed in the same order as they appear in the source document by default. The <code>order</code> property can be used to change this ordering.</p>">
+						</div>
+					</div>
+				</div>
+				<div class="childrenTip">
+					<p>The children flex properties can be applied at child level, separate for each child. See the results section and change some of their properties.</p>
+				</div>
+			</div>
+			<div flex>
+				<h3 class="pull-left">Result</h3>
+				<p class="pull-right">
+					<md-button class="md-accent md-raised" ng-click="addChild()">Add child</md-button>
+				</p>
+
+				<div class="clearfix"></div>
+
+				<div id="parentContainer" class="flexbox-parent" ng-attr-style="
+              -webkit-flex-direction:  {{parent.flexDirection}};
+              flex-direction:          {{parent.flexDirection}};
+
+              -webkit-flex-wrap:       {{parent.flexWrap}};
+              flex-wrap:               {{parent.flexWrap}};
+
+              -webkit-justify-content: {{parent.justifyContent}};
+              justify-content:         {{parent.justifyContent}};
+
+              -webkit-align-items:     {{parent.alignItems}};
+              align-items:             {{parent.alignItems}};
+
+              -webkit-align-content:   {{parent.alignContent}};
+              align-content:           {{parent.alignContent}};
+              ">
+					<div class="code md-whiteframe-z1" ng-repeat="child in children" ng-attr-style="
+                width:               {{child.width}};
+
+                -webkit-order:       {{child.order}};
+                order:               {{child.order}};
+
+                -webkit-flex-grow:   {{child.flexGrow}};
+                flex-grow:           {{child.flexGrow}};
+
+                -webkit-flex-shrink: {{child.flexShrink}};
+                flex-shrink:         {{child.flexShrink}};
+
+                -webkit-flex-basis:  {{child.flexBasis}};
+                flex-basis:          {{child.flexBasis}};
+
+                -webkit-align-self:  {{child.alignSelf}};
+                align-self:          {{child.alignSelf}};
+                
+                height: {{child.height}};
+
+              ">
+						<div class="clearfix">
+							<span class="child-number" aria-label="Number">{{$index + 1}}</span>
+							<span class="remove-child pull-right" ng-click="removeChild($index)" title="Remove">
+                  &#x2716;
+                </span>
+						</div>
+
+						<div class="child-controls">
+							<md-input-container>
+								<p>width:</p>
+								<input type="text" ng-model="children[$index].width">
+							</md-input-container>
+
+							<md-input-container>
+								<p>height:</p>
+								<input type="text" ng-model="children[$index].height">
+							</md-input-container>
+
+							<md-input-container>
+								<p>flex-grow:</p>
+								<input type="number" ng-model="children[$index].flexGrow">
+							</md-input-container>
+
+							<md-input-container>
+								<p>flex-shrink:</p>
+								<input type="number" ng-model="children[$index].flexShrink">
+							</md-input-container>
+
+							<md-input-container>
+								<p>flex-basis:</p>
+								<input type="text" ng-model="children[$index].flexBasis">
+							</md-input-container>
+
+							<md-input-container>
+								<p>align-self:</p>
+								<md-select ng-model="children[$index].alignSelf">
+									<md-option ng-value="value" ng-repeat="value in ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch']">{{value}}</md-option>
+								</md-select>
+							</md-input-container>
+
+							<md-input-container>
+								<p>order:</p>
+								<input type="number" ng-model="children[$index].order">
+							</md-input-container>
+
+						</div>
+						<div class="logochild">
+							<img src="logo-ubiqum-color.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p>Coded by Berenguer Pou at Ubiqum Barcelona</p>
+		<p class="text-muted">(based on a demo by <a href="https://github.com/imjustd" target="_blank">Dimitar Stojanov</a>) Descriptions in tooltips extracted from <a href="https://css-tricks.com/" target="_blank">CSS Tricks website</a></p>
+	</md-content>
+
+
+
+	<!-- bootstrap 3.3.7 and Jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- AngularJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>
+
+	<!-- Angular Material JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.js"></script>
+
+	<!-- App.js -->
+	<script src="js/app.js"></script>
+</body>
+
+</html>

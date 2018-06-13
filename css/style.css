@@ -1,0 +1,199 @@
+.flexbox-parent {
+	display: -webkit-flex;
+	display: flex;
+	background: #ffd54f;
+	overflow: scroll;
+	width: 100%;
+	padding: 6px;
+	min-height: 500px;
+}
+
+.flexbox-parent > div {
+	display: inline-block;
+	background: white;
+	overflow: hidden;
+	margin: 6px;
+	padding: 5px;
+}
+
+.flexbox-parent > div .child-controls {
+	margin-top: 7px;
+}
+
+.child-number {
+	display: block;
+	width: 22px;
+	height: 22px;
+	background: #f30;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	float: left;
+}
+
+.code {
+	font-size: 14px;
+}
+
+.remove-child {
+	background: transparent;
+	color: #ff6f00;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.highlight {
+	color: #f30;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.right-padding {
+	padding-right: 15px;
+}
+
+h3 {
+	margin: 0 0 10px 0 !important;
+}
+
+p {
+	margin: 0 !important;
+	line-height: 1.4em !important;
+}
+
+md-input-container {
+	padding: 0 0 5px 0 !important;
+}
+
+md-input-container .md-input {
+	padding: 0 !important;
+	line-height: 1em !important;
+}
+
+md-select {
+	margin-top: 0 !important;
+}
+
+md-select .md-select-label {
+	padding-top: 2px !important;
+	padding-bottom: 4px !important;
+}
+
+md-radio-button {
+	margin: 0px 0px !important;
+}
+
+md-divider {
+	margin: 8px 0 !important;
+}
+
+md-radio-button.md-default-theme .md-on {
+	background-color: #f30;
+}
+
+md-radio-button.md-default-theme.md-checked .md-off {
+	border-color: #f30;
+}
+
+.md-button.md-default-theme.md-accent.md-raised,
+.md-button.md-default-theme.md-accent.md-fab {
+	color: white;
+	background-color: #f30;
+}
+
+.md-button.md-default-theme.md-accent.md-raised:not([disabled]):hover,
+.md-button.md-default-theme.md-accent.md-raised:not([disabled]):focus,
+.md-button.md-default-theme.md-accent.md-fab:not([disabled]):hover,
+.md-button.md-default-theme.md-accent.md-fab:not([disabled]):focus {
+	background-color: #f30;
+}
+
+md-input-container {
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+}
+
+.child-controls p {
+	color: red;
+	padding-right: 3px;
+}
+
+.logochild {
+	padding: 8px;
+	text-align: center;
+}
+
+.logochild img {
+	width: 60px;
+}
+
+.childrenTip {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.propertiesChildDesc {
+
+	text-align: justify;
+	font-size: 12px;
+}
+
+.titleDesc {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.tooltip-inner {
+	width: 300px;
+	text-align: left;
+	line-height: 1.4em;
+}
+
+p > .tooltip-inner {
+	margin-bottom: 6px;
+}
+
+.parentProperties {
+	min-width: 140px;
+}
+
+.parentProperties img {
+	width: 20px;
+	margin-left: 3px;
+}
+
+.propertiesChildDesc img {
+	width: 20px;
+	margin-left: 3px;
+}
+
+.logoUBI {
+	width: 250px;
+	margin: 0 auto;
+}
+
+.topHeader {
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.titleUbi {
+	color: #ff3300;
+}
