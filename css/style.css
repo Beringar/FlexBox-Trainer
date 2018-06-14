@@ -153,6 +153,8 @@ md-input-container {
 
 	text-align: justify;
 	font-size: 12px;
+	min-width: 120px;
+	flex-grow: 0;
 }
 
 .titleDesc {
