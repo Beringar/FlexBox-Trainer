@@ -197,3 +197,7 @@ p > .tooltip-inner {
 .titleUbi {
 	color: #ff3300;
 }
+
+.parentWrap {
+	flex-wrap: wrap;
+}

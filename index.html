@@ -29,7 +29,7 @@
 				<md-divider></md-divider>
 
 				<h3>Parent Flex Properties &ndash; <span class="highlight">flex container</span></h3>
-				<div layout="row" layout-gt-md="row" class="code">
+				<div layout="row" layout-gt-md="row" class="code parentWrap">
 					<div flex class="parentProperties">
 						<strong>flex-direction</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="It establishes the main-axis, thus defining the direction flex items are placed in the flex container.<br><em>Reminder: the main axis of a flex container is the primary axis along which flex items are laid out. Beware, it is not necessarily horizontal; it depends on the <code>flex-direction</code> property.</em><br>The <code>flex-direction</code> property accepts 4 different values: <br><ul><li><code>row</code> (<strong>default</strong>): same as text direction</li><li><code>row-reverse</code>: opposite to text direction</li><li><code>column</code>: same as <code>row</code> but top to bottom</li><li><code>column-reverse</code>: same as <code>row-reverse</code> top to bottom</li></ul>">
 						<md-radio-group ng-model="parent.flexDirection">
@@ -120,7 +120,7 @@
 
 				<h3>Children Flex Properties &ndash; <span class="highlight">flex items</span></h3>
 				<div flex>
-					<div layout="row" layout-gt-md="row" class="code">
+					<div layout="row" layout-gt-md="row" class="code parentWrap">
 						<div flex class="propertiesChildDesc">
 							<strong>flex-grow</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>IT defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up. </p>
 <p>For example, if all items have <code>flex-grow</code> set to 1, every child will set to an equal size inside the container. If you were to give one of the children a value of 2, that child would take up twice as much space as the others.</p>">
