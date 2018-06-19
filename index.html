@@ -28,7 +28,7 @@
 				</div>
 				<md-divider></md-divider>
 
-				<h3>Parent Flex Properties &ndash; <span class="highlight">flex container</span></h3>
+				<h3>Parent Flex Properties &ndash; <span class="highlight">flex container</span> (display: flex)</h3>
 				<div layout="row" layout-gt-md="row" class="code parentWrap">
 					<div flex class="parentProperties">
 						<strong>flex-direction</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="It establishes the main-axis, thus defining the direction flex items are placed in the flex container.<br><em>Reminder: the main axis of a flex container is the primary axis along which flex items are laid out. Beware, it is not necessarily horizontal; it depends on the <code>flex-direction</code> property.</em><br>The <code>flex-direction</code> property accepts 4 different values: <br><ul><li><code>row</code> (<strong>default</strong>): same as text direction</li><li><code>row-reverse</code>: opposite to text direction</li><li><code>column</code>: same as <code>row</code> but top to bottom</li><li><code>column-reverse</code>: same as <code>row-reverse</code> top to bottom</li></ul>">
@@ -40,14 +40,7 @@
 						</md-radio-group>
 					</div>
 					<div flex class="parentProperties">
-						<strong>flex-wrap</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It defines whether the flex items are forced in a single line or can be flowed into multiple lines. If set to multiple lines, it also defines the cross-axis which determines the direction new lines are stacked in.</p>
-<p><em>Reminder: the cross axis is the axis perpendicular to the main axis. Its direction depends on the main axis direction.</em></p>
-<p>The <code>flex-wrap</code> property accepts 3 different values:</p>
-<ul>
-<li><code>nowrap</code> (<strong>default</strong>): single-line which may cause the container to overflow</li>
-<li><code>wrap</code>: multi-lines, direction is defined by <code>flex-direction</code></li>
-<li><code>wrap-reverse</code>: multi-lines, opposite to direction defined by <code>flex-direction</code></li>
-</ul>">
+						<strong>flex-wrap</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It defines whether the flex items are forced in a single line or can be flowed into multiple lines. If set to multiple lines, it also defines the cross-axis which determines the direction new lines are stacked in.</p><p><em>Reminder: the cross axis is the axis perpendicular to the main axis. Its direction depends on the main axis direction.</em></p><p>The <code>flex-wrap</code> property accepts 3 different values:</p><ul><li><code>nowrap</code> (<strong>default</strong>): single-line which may cause the container to overflow</li><li><code>wrap</code>: multi-lines, direction is defined by <code>flex-direction</code></li><li><code>wrap-reverse</code>: multi-lines, opposite to direction defined by <code>flex-direction</code></li></ul>">
 						<md-radio-group ng-model="parent.flexWrap">
 							<md-radio-button value="nowrap" class="highlight">nowrap</md-radio-button>
 							<md-radio-button value="wrap">wrap</md-radio-button>
@@ -55,16 +48,7 @@
 						</md-radio-group>
 					</div>
 					<div flex class="parentProperties">
-						<strong>justify-content</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.</p>
-<p>The <code>justify-content</code> property accepts 5 different values:</p>
-<ul>
-<li><code>flex-start</code> (<strong>default</strong>): items are packed toward the start line</li>
-<li><code>flex-end</code>: items are packed toward to end line</li>
-<li><code>center</code>: items are centered along the line</li>
-<li><code>space-between</code>: items are evenly distributed in the line; first item is on the start line, last item on the end line</li>
-<li><code>space-around</code>: items are evenly distributed in the line with equal space around them</li>
-<li><code>space-evenly</code>: items are distributed so that the spacing between any two adjacent alignment subjects, before the first alignment subject, and after the last alignment subject is the same</li>
-</ul>">
+						<strong>justify-content</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.</p><p>The <code>justify-content</code> property accepts 5 different values:</p><ul><li><code>flex-start</code> (<strong>default</strong>): items are packed toward the start line</li><li><code>flex-end</code>: items are packed toward to end line</li><li><code>center</code>: items are centered along the line</li><li><code>space-between</code>: items are evenly distributed in the line; first item is on the start line, last item on the end line</li><li><code>space-around</code>: items are evenly distributed in the line with equal space around them</li><li><code>space-evenly</code>: items are distributed so that the spacing between any two adjacent alignment subjects, before the first alignment subject, and after the last alignment subject is the same</li></ul>">
 						<md-radio-group ng-model="parent.justifyContent">
 							<md-radio-button value="flex-start" class="highlight">flex-start</md-radio-button>
 							<md-radio-button value="flex-end">flex-end</md-radio-button>
@@ -74,15 +58,7 @@
 						</md-radio-group>
 					</div>
 					<div flex class="parentProperties">
-						<strong>align-items</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It defines the default behaviour for how flex items are laid out along the cross axis on the current line. You can think of it as the <code>justify-content</code> version for the cross-axis (perpendicular to the main-axis).</p>
-<p>The <code>align-items</code> property accepts 5 different values:</p>
-<ul>
-<li><code>flex-start</code>: cross-start margin edge of the items is placed on the cross-start line</li>
-<li><code>flex-end</code>: cross-end margin edge of the items is placed on the cross-end line</li>
-<li><code>center</code>: items are centered in the cross-axis</li>
-<li><code>baseline</code>: items are aligned such as their baselines align</li>
-<li><code>stretch</code> (<strong>default</strong>): stretch to fill the container (still respect min-width/max-width)</li>
-</ul>">
+						<strong>align-items</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It defines the default behaviour for how flex items are laid out along the cross axis on the current line. You can think of it as the <code>justify-content</code> version for the cross-axis (perpendicular to the main-axis).</p><p>The <code>align-items</code> property accepts 5 different values:</p><ul><li><code>flex-start</code>: cross-start margin edge of the items is placed on the cross-start line</li><li><code>flex-end</code>: cross-end margin edge of the items is placed on the cross-end line</li><li><code>center</code>: items are centered in the cross-axis</li><li><code>baseline</code>: items are aligned such as their baselines align</li><li><code>stretch</code> (<strong>default</strong>): stretch to fill the container (still respect min-width/max-width)</li></ul>">
 						<md-radio-group ng-model="parent.alignItems">
 							<md-radio-button value="stretch" class="highlight">stretch</md-radio-button>
 							<md-radio-button value="flex-start">flex-start</md-radio-button>
@@ -92,17 +68,7 @@
 						</md-radio-group>
 					</div>
 					<div flex class="parentProperties">
-						<strong>align-content</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It helps aligning a flex container's lines within it when there is extra space in the cross-axis, similar to how <code>justify-content</code> aligns individual items within the main-axis. </p>
-<p><em>Note, this property has no effect when the flexbox has only a single line.</em></p>
-<p>The <code>align-content</code> property accepts 6 different values:</p>
-<ul>
-<li><code>flex-start</code>: lines packed to the start of the container</li>
-<li><code>flex-end</code>: lines packed to the end of the container</li>
-<li><code>center</code>: lines packed to the center of the container</li>
-<li><code>space-between</code>: lines evenly distributed; the first line is at the start of the container while the last one is at the end</li>
-<li><code>space-around</code>: lines evenly distributed with equal space between them</li>
-<li><code>stretch</code> (<strong>default</strong>): lines stretch to take up the remaining space</li>
-</ul>">
+						<strong>align-content</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It helps aligning a flex container's lines within it when there is extra space in the cross-axis, similar to how <code>justify-content</code> aligns individual items within the main-axis. </p><p><em>Note, this property has no effect when the flexbox has only a single line.</em></p><p>The <code>align-content</code> property accepts 6 different values:</p><ul><li><code>flex-start</code>: lines packed to the start of the container</li><li><code>flex-end</code>: lines packed to the end of the container</li><li><code>center</code>: lines packed to the center of the container</li><li><code>space-between</code>: lines evenly distributed; the first line is at the start of the container while the last one is at the end</li><li><code>space-around</code>: lines evenly distributed with equal space between them</li><li><code>stretch</code> (<strong>default</strong>): lines stretch to take up the remaining space</li></ul>">
 						<md-radio-group ng-model="parent.alignContent">
 							<md-radio-button value="stretch" class="highlight">stretch</md-radio-button>
 							<md-radio-button value="flex-start">flex-start</md-radio-button>
@@ -122,27 +88,16 @@
 				<div flex>
 					<div layout="row" layout-gt-md="row" class="code parentWrap">
 						<div flex class="propertiesChildDesc">
-							<strong>flex-grow</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>IT defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up. </p>
-<p>For example, if all items have <code>flex-grow</code> set to 1, every child will set to an equal size inside the container. If you were to give one of the children a value of 2, that child would take up twice as much space as the others.</p>">
+							<strong>flex-grow</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>IT defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up. </p><p>For example, if all items have <code>flex-grow</code> set to 1, every child will set to an equal size inside the container. If you were to give one of the children a value of 2, that child would take up twice as much space as the others.</p>">
 						</div>
 						<div flex class="propertiesChildDesc">
-							<strong>flex-shrink</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It specifies the 'flex shrink factor', which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when there isn't enough space on the row.</p>
-<p>When omitted, it is set to <code>1</code> and the flex shrink factor is multiplied by the flex basis when distributing negative space.</p>">
+							<strong>flex-shrink</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It specifies the 'flex shrink factor', which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when there isn't enough space on the row.</p><p>When omitted, it is set to <code>1</code> and the flex shrink factor is multiplied by the flex basis when distributing negative space.</p>">
 						</div>
 						<div flex class="propertiesChildDesc">
-							<strong>flex-basis</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It specifies the initial size of the flex item, before any available space is distributed according to the flex factors. When omitted from the <code>flex</code> shorthand, its specified value is the length zero.</p>
-<p>A flex-basis value set to <code>auto</code> sizes the element according to its size property (which can itself be the keyword <code>auto</code>, which sizes the element based on its contents).</p>">
+							<strong>flex-basis</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It specifies the initial size of the flex item, before any available space is distributed according to the flex factors. When omitted from the <code>flex</code> shorthand, its specified value is the length zero.</p><p>A flex-basis value set to <code>auto</code> sizes the element according to its size property (which can itself be the keyword <code>auto</code>, which sizes the element based on its contents).</p>">
 						</div>
 						<div flex class="propertiesChildDesc">
-							<strong>align-self</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It makes possible to override the <code>align-items</code> value for specific flex items.</p>
-<p>The <code>align-self</code> property accepts the same 5 values as the <code>align-items</code>:</p>
-<ul>
-<li><code>flex-start</code>: cross-start margin edge of the item is placed on the cross-start line</li>
-<li><code>flex-end</code>: cross-end margin edge of the item is placed on the cross-end line</li>
-<li><code>center</code>: item is centered in the cross-axis</li>
-<li><code>baseline</code>: items are aligned such as their baseline are aligned </li>
-<li><code>stretch</code> (default): stretch to fill the container (still respect min-width/max-width)</li>
-</ul>">
+							<strong>align-self</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>It makes possible to override the <code>align-items</code> value for specific flex items.</p><p>The <code>align-self</code> property accepts the same 5 values as the <code>align-items</code>:</p><ul><li><code>flex-start</code>: cross-start margin edge of the item is placed on the cross-start line</li><li><code>flex-end</code>: cross-end margin edge of the item is placed on the cross-end line</li><li><code>center</code>: item is centered in the cross-axis</li><li><code>baseline</code>: items are aligned such as their baseline are aligned </li><li><code>stretch</code> (default): stretch to fill the container (still respect min-width/max-width)</li></ul>">
 						</div>
 						<div flex class="propertiesChildDesc">
 							<strong>order</strong><img src="moreinfo.svg" alt="moreinfo" data-placement="bottom" data-html="true" data-toggle="tooltip" title="<p>Flex items are displayed in the same order as they appear in the source document by default. The <code>order</code> property can be used to change this ordering.</p>">
@@ -255,9 +210,7 @@
 		<p class="text-muted">(based on a demo by <a href="https://github.com/imjustd" target="_blank">Dimitar Stojanov</a>) Descriptions in tooltips extracted from <a href="https://css-tricks.com/" target="_blank">CSS Tricks website</a></p>
 	</md-content>
 
-
-
-	<!-- bootstrap 3.3.7 and Jquery -->
+	<!-- bootstrap 3.3.7 and Jquery 3.3.1 -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
